@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ù„ÙˆØ­Ø© Ø§Ù„ØªØ­ÙƒÙ… â€” Ø±Ø¨Ø­ÙŠ</title>
+  
+  <!-- Ø®Ø·ÙˆØ· Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Ø£ÙŠÙ‚ÙˆÙ†Ø§Øª Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Ø§Ù„Ø£Ù†Ù…Ø§Ø· -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC415206EE');
+  </script>
+</head>
+<body>
+
+  <!-- Ø­Ø§ÙˆÙŠØ© Ø§Ù„Ø¥Ø´Ø¹Ø§Ø±Ø§Øª -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Ø§Ù„Ù‡ÙŠÙƒÙ„ Ø§Ù„Ø¹Ø§Ù… Ù„Ù„ØªØ·Ø¨ÙŠÙ‚ -->
+  <div class="app-layout">
+    
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         ðŸ“± Ù‡ÙŠØ¯Ø± Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„ (Mobile Header)
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <header class="mobile-header">
+      <button id="mobile-menu-toggle" style="font-size: 20px; color: var(--text-primary);">
+        <i class="fa fa-bars"></i>
+      </button>
+      <span style="font-size: 1.2rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ðŸ’° Ø±Ø¨Ø­ÙŠ</span>
+      <div class="js-user-avatar user-avatar" style="width: 32px; height: 32px; font-size: 13px;">ØŸ</div>
+    </header>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         ðŸ—‚ï¸ Ø§Ù„Ø³Ø§ÙŠØ¯Ø¨Ø§Ø± (Sidebar Layout)
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ðŸ’° Ø±Ø¨Ø­ÙŠ</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link active">
+          <i class="fa fa-home"></i> Ù„ÙˆØ­Ø© Ø§Ù„ØªØ­ÙƒÙ…
+        </a>
+        <a href="ads.html" class="sidebar-link">
+          <i class="fa fa-play-circle"></i> Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa fa-wallet"></i> Ø§Ù„Ø³Ø­Ø¨ ÙˆØ§Ù„Ù…Ø­ÙØ¸Ø©
+        </a>
+        <a href="admin/index.html" class="sidebar-link js-admin-link" style="display: none; color: var(--warning);">
+          <i class="fa fa-shield-alt"></i> Ù„ÙˆØ­Ø© Ø§Ù„Ø£Ø¯Ù…Ù†
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-mini">
+          <div class="js-user-avatar user-avatar">ØŸ</div>
+          <div class="user-info">
+            <div class="js-user-name user-name">Ø¬Ø§Ø±ÙŠ Ø§Ù„ØªØ­Ù…ÙŠÙ„...</div>
+            <div class="user-role">
+              <span class="js-user-level">Ø¹Ø¶Ùˆ</span>
+              <i class="fa fa-gem" style="color: var(--primary); font-size: 10px;"></i>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="sidebar-link js-logout-btn" style="margin-top: 16px; color: var(--accent); padding: 8px 12px; font-size: 14px;">
+          <i class="fa fa-sign-out-alt"></i> ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø®Ø±ÙˆØ¬
+        </a>
+        <div class="sidebar-legal-links" aria-label="Ø±ÙˆØ§Ø¨Ø· Ø§Ù„ØµÙØ­Ø§Øª Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="contact-us.html">Contact Us</a>
+          <a href="dmca.html">DMCA</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         ðŸ’» Ø§Ù„Ù‚Ø³Ù… Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ (Main Content Container)
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <main class="main-content">
+      
+      <!-- Ø§Ù„ØªÙˆØ¨Ø¨Ø§Ø± (Topbar Layout) -->
+      <div class="topbar">
+        <h4>Ù…Ø±Ø­Ø¨Ù‹Ø§ Ø¨ÙƒØŒ <span class="js-user-name text-gradient">Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…</span> ðŸ‘‹</h4>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="circle-btn" title="ØªØºÙŠÙŠØ± Ø§Ù„ÙˆØ¶Ø¹ Ø§Ù„Ù„ÙˆÙ†ÙŠ">
+            <i class="fa fa-moon"></i>
+          </button>
+          <div class="nav-balance">
+            <i class="fa fa-coins"></i>
+            <span class="js-user-balance">0.00 Ø¬Ù†ÙŠÙ‡</span>
+          </div>
+          <button class="circle-btn js-logout-btn" title="ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø®Ø±ÙˆØ¬" style="color: var(--accent);">
+            <i class="fa fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Ù…Ø­ØªÙˆÙ‰ Ù„ÙˆØ­Ø© Ø§Ù„ØªØ­ÙƒÙ… Ø§Ù„ÙØ¹Ù„ÙŠ -->
+      <div class="page-container">
+        
+        <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2>Ù„ÙˆØ­Ø© Ø§Ù„ØªØ­ÙƒÙ…</h2>
+            <p>Ù…Ø±Ø­Ø¨Ø§Ù‹ Ø¨Ùƒ Ù…Ø¬Ø¯Ø¯Ø§Ù‹! Ø¥Ù„ÙŠÙƒ Ù…Ù„Ø®Øµ Ù†Ø´Ø§Ø· Ø­Ø³Ø§Ø¨Ùƒ ÙˆÙ…ÙƒØ§ÙØ¢ØªÙƒ Ø§Ù„Ø­Ø§Ù„ÙŠØ©.</p>
+          </div>
+          
+          <!-- Ø¨Ø·Ø§Ù‚Ø© Ù…Ø³ØªÙˆÙ‰ XP Ø§Ù„Ø³Ø±ÙŠØ¹ -->
+          <div class="level-info-box" style="margin-bottom: 0;">
+            <div class="level-icon-badge">ðŸ†</div>
+            <div>
+              <div style="font-size: 12px; color: var(--text-secondary);">Ù…Ø³ØªÙˆØ§Ùƒ Ø§Ù„Ø­Ø§Ù„ÙŠ</div>
+              <div class="js-user-level fw-bold" style="color: var(--primary); font-size: 16px;">Ø¨Ø±ÙˆÙ†Ø²ÙŠ</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. Ø´Ø¨ÙƒØ© Ø§Ù„Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª (Stats Cards) -->
+        <div class="grid-4" style="margin-bottom: 28px;">
+          <div class="stat-card">
+            <div class="stat-icon" style="background: var(--primary-light); color: var(--primary);">
+              <i class="fa fa-coins"></i>
+            </div>
+            <div class="stat-value js-user-balance" data-money-format="amount">0.00</div>
+            <div class="stat-label">Ø§Ù„Ø±ØµÙŠØ¯ Ø§Ù„Ù…ØªØ§Ø­ (Ø¬Ù†ÙŠÙ‡)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(0, 212, 170, 0.1); color: var(--secondary);">
+              <i class="fa fa-play-circle"></i>
+            </div>
+            <div id="stat-today-views" class="stat-value">0</div>
+            <div class="stat-label">Ù…Ø´Ø§Ù‡Ø¯Ø§Øª Ø§Ù„ÙŠÙˆÙ…</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(255, 179, 71, 0.1); color: var(--warning);">
+              <i class="fa fa-chart-line"></i>
+            </div>
+            <div id="stat-total-earnings" class="stat-value">0.00</div>
+            <div class="stat-label">Ø¥Ø¬Ù…Ø§Ù„ÙŠ Ø§Ù„Ø£Ø±Ø¨Ø§Ø­</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(255, 107, 107, 0.1); color: var(--accent);">
+              <i class="fa fa-eye"></i>
+            </div>
+            <div id="stat-total-views" class="stat-value">0</div>
+            <div class="stat-label">Ø¥Ø¬Ù…Ø§Ù„ÙŠ Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</div>
+          </div>
+        </div>
+
+        <!-- 2. Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„ØªÙ‚Ø¯Ù… ÙˆØ®Ø¨Ø±Ø© XP -->
+        <div class="grid-2" style="margin-bottom: 28px; align-items: start;">
+          
+          <!-- Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„ØªÙ‚Ø¯Ù… Ø§Ù„ÙŠÙˆÙ…ÙŠ ÙˆØ§Ù„Ø¥Ø¹Ù„Ø§Ù† -->
+          <div class="card">
+            <h3 style="margin-bottom: 16px;"><i class="fa fa-calendar-day text-primary"></i> ØªÙ‚Ø¯Ù… Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„ÙŠÙˆÙ…ÙŠ</h3>
+            <div class="progress-container">
+              <div class="progress-header">
+                <span>Ø§Ù„Ø­Ø¯ Ø§Ù„ÙŠÙˆÙ…ÙŠ Ù„Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</span>
+                <span id="daily-progress-label">0 / 10 Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div id="daily-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+              ØªÙ†Ø¨ÙŠÙ‡: ÙŠÙ…ÙƒÙ†Ùƒ Ù…Ø´Ø§Ù‡Ø¯Ø© Ø­ØªÙ‰ 10 Ø¥Ø¹Ù„Ø§Ù†Ø§Øª ÙŠÙˆÙ…ÙŠØ§Ù‹ ÙƒØ­Ø¯ Ø£Ù‚ØµÙ‰ Ù„Ù„Ø­ÙØ§Ø¸ Ø¹Ù„Ù‰ Ø³Ù„Ø§Ù…Ø© Ø§Ù„Ø­Ø³Ø§Ø¨.
+            </p>
+            <div style="text-align: center;">
+              <a href="ads.html" id="dashboard-watch-btn" class="btn btn-primary btn-block">â–¶ Ø§Ø¨Ø¯Ø£ ÙƒØ³Ø¨ Ø§Ù„Ø£Ø±Ø¨Ø§Ø­ Ø§Ù„Ø¢Ù†</a>
+            </div>
+          </div>
+
+          <!-- Ø¨Ø·Ø§Ù‚Ø© XP ÙˆØ§Ù„Ù…Ø³ØªÙˆÙ‰ -->
+          <div class="card">
+            <h3 style="margin-bottom: 16px;"><i class="fa fa-gem text-secondary"></i> Ù…Ø³ØªÙˆÙ‰ Ø§Ù„Ø®Ø¨Ø±Ø© XP</h3>
+            <div class="progress-container">
+              <div class="progress-header">
+                <span>Ø§Ù„Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØªØ§Ù„ÙŠ</span>
+                <span id="xp-progress-label">0 / 100 XP</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div id="xp-progress-fill" class="progress-bar-fill" style="width: 0%; background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);"></div>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
+              <span>XP Ø§Ù„Ø­Ø§Ù„ÙŠ: <strong id="user-xp-display" class="text-secondary">0</strong></span>
+              <span id="next-level-title">Ø§Ù„Ù…Ø³ØªÙˆÙ‰ Ø§Ù„Ù‚Ø§Ø¯Ù…: ÙØ¶ÙŠ</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px; line-height: 1.6;">
+              * ØªØ­ØµÙ„ Ø¹Ù„Ù‰ <strong class="text-primary">10 XP</strong> Ù…Ù‚Ø§Ø¨Ù„ ÙƒÙ„ Ù…Ø´Ø§Ù‡Ø¯Ø© Ø¥Ø¹Ù„Ø§Ù†ÙŠØ© Ù…ÙƒØªÙ…Ù„Ø©. ØªÙ…Ù†Ø­Ùƒ Ø§Ù„ØªØ±Ù‚ÙŠØ§Øª Ù…ÙŠØ²Ø§Øª ÙˆÙ‡Ø¯Ø§ÙŠØ§ Ø­ØµØ±ÙŠØ©.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- 3. Ø§Ù„Ø¹Ù…Ù„ÙŠØ§Øª Ø§Ù„Ø£Ø®ÙŠØ±Ø© ÙˆØ§Ù„Ù†Ø´Ø§Ø·Ø§Øª -->
+        <div class="grid-2" style="align-items: start;">
+          
+          <!-- Ø³Ø¬Ù„ Ø¢Ø®Ø± Ø§Ù„Ø£Ø±Ø¨Ø§Ø­ ÙˆØ§Ù„Ù…ÙƒØ§ÙØ¢Øª -->
+          <div class="card">
+            <h3 style="margin-bottom: 20px;"><i class="fa fa-history text-primary"></i> Ø¢Ø®Ø± Ø§Ù„Ø£Ø±Ø¨Ø§Ø­ ÙˆØ§Ù„Ù…ÙƒØ§ÙØ¢Øª</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Ø§Ù„ØªØ§Ø±ÙŠØ®</th>
+                    <th>Ø§Ù„Ù†ÙˆØ¹</th>
+                    <th>Ø§Ù„Ù…Ø¨Ù„Øº</th>
+                  </tr>
+                </thead>
+                <tbody id="earnings-tbody">
+                  <!-- Ø¯ÙŠÙ†Ø§Ù…ÙŠÙƒÙŠ -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Ø§Ù„Ø®Ø· Ø§Ù„Ø²Ù…Ù†ÙŠ Ù„Ù„Ù†Ø´Ø§Ø·Ø§Øª (Activity Timeline) -->
+          <div class="card">
+            <h3 style="margin-bottom: 20px;"><i class="fa fa-chart-line text-secondary"></i> Ø®Ø· Ø§Ù„Ù†Ø´Ø§Ø· Ø§Ù„Ø²Ù…Ù†ÙŠ (Timeline)</h3>
+            <div class="timeline" id="timeline-container">
+              <!-- Ø¯ÙŠÙ†Ø§Ù…ÙŠÙƒÙŠ -->
+            </div>
+          </div>
+
+        </div>
+
+        <div class="dashboard-legal-card">
+          <h3><i class="fa fa-file-shield text-primary"></i> Ø±ÙˆØ§Ø¨Ø· Ù…Ù‡Ù…Ø©</h3>
+          <div class="dashboard-legal-grid">
+            <a href="privacy-policy.html" class="dashboard-legal-link">
+              <i class="fa fa-user-shield"></i>
+              <span>Privacy Policy</span>
+            </a>
+            <a href="terms-of-service.html" class="dashboard-legal-link">
+              <i class="fa fa-file-contract"></i>
+              <span>Terms of Service</span>
+            </a>
+            <a href="contact-us.html" class="dashboard-legal-link">
+              <i class="fa fa-envelope"></i>
+              <span>Contact Us</span>
+            </a>
+            <a href="dmca.html" class="dashboard-legal-link">
+              <i class="fa fa-scale-balanced"></i>
+              <span>DMCA</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         ðŸ“± Ø´Ø±ÙŠØ· Ø§Ù„ØªÙ†Ù‚Ù„ Ø§Ù„Ø³ÙÙ„ÙŠ Ù„Ù„Ù‡ÙˆØ§ØªÙ (Mobile Nav Bar)
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <nav class="mobile-nav">
+      <a href="dashboard.html" class="mobile-nav-item active">
+        <i class="fa fa-home"></i><span>Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</span>
+      </a>
+      <a href="ads.html" class="mobile-nav-item">
+        <i class="fa fa-play-circle"></i><span>Ù…Ø´Ø§Ù‡Ø¯Ø©</span>
+      </a>
+      <a href="wallet.html" class="mobile-nav-item">
+        <i class="fa fa-wallet"></i><span>Ø§Ù„Ù…Ø­ÙØ¸Ø©</span>
+      </a>
+      <a href="#" class="mobile-nav-item js-logout-btn" style="color: var(--accent);">
+        <i class="fa fa-sign-out-alt"></i><span>Ø®Ø±ÙˆØ¬</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- ØªØ¶Ù…ÙŠÙ† Ø§Ù„Ø³ÙƒØ±ÙŠØ¨ØªØ§Øª -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/config.js?v=20260522-render"></script>
+  <script src="js/backend-config.js?v=20260522-render"></script>
+  <script src="js/backend-service.js?v=20260522-render"></script>
+  <script src="js/firestore-service.js?v=20260522-egp"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/security.js"></script>
+  <script src="js/router.js?v=20260522-egp"></script>
+  <script src="js/app.js?v=20260522-egp"></script>
+  <script src="js/analytics.js?v=20260522-ga"></script>
+  <script src="js/dashboard.js?v=20260522-ga"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export / Backup - Ø±Ø¨Ø­ÙŠ</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KC415206EE');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div id="toast-container" class="toast-container"></div>
+  <div id="admin-layout" class="app-layout">
+    <main class="main-content">
+      <div class="page-container">
+        <div class="page-header">
+          <h2>Ø§Ù„Ù†Ø³Ø® Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠ ÙˆØ§Ù„ØªØµØ¯ÙŠØ±</h2>
+          <p>ØªØµØ¯ÙŠØ± ÙŠØ¯ÙˆÙŠ Ø¹Ù†Ø¯ Ø§Ù„Ø­Ø§Ø¬Ø© ÙÙ‚Ø· Ù„Ù„Ø­ÙØ§Ø¸ Ø¹Ù„Ù‰ ØªÙƒÙ„ÙØ© Firestore Ù…Ù†Ø®ÙØ¶Ø©.</p>
+        </div>
+
+        <div class="admin-stats-grid">
+          <div class="card">
+            <h3>Users</h3>
+            <button class="btn btn-primary" data-export="users" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="users" data-format="csv">CSV</button>
+          </div>
+          <div class="card">
+            <h3>Ads</h3>
+            <button class="btn btn-primary" data-export="ads" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="ads" data-format="csv">CSV</button>
+          </div>
+          <div class="card">
+            <h3>Withdrawals</h3>
+            <button class="btn btn-primary" data-export="withdrawals" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="withdrawals" data-format="csv">CSV</button>
+          </div>
+          <div class="card">
+            <h3>Analytics</h3>
+            <button class="btn btn-primary" data-export="adAnalytics" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="adAnalytics" data-format="csv">CSV</button>
+          </div>
+          <div class="card">
+            <h3>Reward Claims</h3>
+            <button class="btn btn-primary" data-export="rewardClaims" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="rewardClaims" data-format="csv">CSV</button>
+          </div>
+          <div class="card">
+            <h3>Security Incidents</h3>
+            <button class="btn btn-primary" data-export="securityIncidents" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="securityIncidents" data-format="csv">CSV</button>
+          </div>
+          <div class="card">
+            <h3>Logs</h3>
+            <button class="btn btn-primary" data-export="logs" data-format="json">JSON</button>
+            <button class="btn btn-secondary" data-export="logs" data-format="csv">CSV</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase.js"></script>
+  <script src="../js/config.js?v=20260522-render"></script>
+  <script src="../js/backend-config.js?v=20260522-render"></script>
+  <script src="../js/backend-service.js?v=20260522-render"></script>
+  <script src="../js/firestore-service.js?v=20260522-egp"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/auth-service.js"></script>
+  <script src="../js/admin-service.js?v=20260522-render"></script>
+  <script src="../js/security.js"></script>
+  <script src="../js/router.js"></script>
+  <script src="../js/app.js?v=20260522-egp"></script>
+  <script src="../js/analytics.js?v=20260522-ga"></script>
+  <script src="../js/admin.js?v=20260522-render"></script>
+</body>
+</html>
+
+

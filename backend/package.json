@@ -1,0 +1,24 @@
+{
+  "name": "adplatform-render-backend",
+  "version": "1.0.0",
+  "description": "Render Express backend for AdPlatform rewards, withdrawals, TimeWall postbacks, VAST proxy, and admin security.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check server.js && node --check src/server.js && node --check firebase-admin.js && node --check routes/timewall.js && node --check routes/rewards.js && node --check routes/withdrawals.js && node --check routes/vast.js && node --check routes/admin.js && node --check services/timewall-service.js && node --check services/reward-service.js && node --check services/withdrawal-service.js && node --check services/vast-service.js && node --check services/admin-service.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "firebase-admin": "^13.10.0",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  }
+}

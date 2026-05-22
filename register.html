@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ Ø¬Ø¯ÙŠØ¯ â€” Ø±Ø¨Ø­ÙŠ</title>
+  
+  <!-- Ø®Ø·ÙˆØ· Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Ø£ÙŠÙ‚ÙˆÙ†Ø§Øª Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Ø§Ù„Ø£Ù†Ù…Ø§Ø· -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+    .auth-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .auth-wrapper::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 60%);
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+      z-index: 1;
+    }
+    .auth-wrapper::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0,212,170,0.1) 0%, transparent 60%);
+      border-radius: 50%;
+      bottom: -100px;
+      left: -100px;
+      z-index: 1;
+    }
+    .auth-container {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC415206EE');
+  </script>
+</head>
+<body>
+
+  <!-- Ø­Ø§ÙˆÙŠØ© Ø§Ù„Ø¥Ø´Ø¹Ø§Ø±Ø§Øª -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <div class="auth-wrapper">
+    <div class="auth-container">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <a href="index.html" style="font-size: 2.2rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ðŸ’° Ø±Ø¨Ø­ÙŠ</a>
+        <p style="color: var(--text-secondary); margin-top: 8px;">Ø§Ù†Ø¶Ù… Ø¥Ù„ÙŠÙ†Ø§ Ø§Ù„ÙŠÙˆÙ… ÙˆØ§Ø¨Ø¯Ø£ ÙÙŠ ØªØ¬Ù…ÙŠØ¹ Ø§Ù„Ù…ÙƒØ§ÙØ¢Øª</p>
+      </div>
+
+      <div class="card" style="padding: 36px 32px;">
+        <h3 style="margin-bottom: 24px; text-align: center;">Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ Ø¬Ø¯ÙŠØ¯</h3>
+        
+        <form id="register-form">
+          <div class="form-group">
+            <label>Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„</label>
+            <div class="input-wrapper">
+              <i class="fa fa-user"></i>
+              <input type="text" id="name" class="form-input" placeholder="Ù…Ø­Ù…Ø¯ Ø£Ø­Ù…Ø¯" required autocomplete="name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</label>
+            <div class="input-wrapper">
+              <i class="fa fa-envelope"></i>
+              <input type="email" id="email" class="form-input" placeholder="name@example.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±</label>
+            <div class="input-wrapper has-password-toggle">
+              <i class="fa fa-lock"></i>
+              <input type="password" id="password" class="form-input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required autocomplete="new-password">
+              <button type="button" class="password-toggle" data-password-toggle="password" aria-label="Ø¥Ø¸Ù‡Ø§Ø± ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±" title="Ø¥Ø¸Ù‡Ø§Ø± ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>ØªØ£ÙƒÙŠØ¯ ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±</label>
+            <div class="input-wrapper has-password-toggle">
+              <i class="fa fa-lock"></i>
+              <input type="password" id="confirm-password" class="form-input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required autocomplete="new-password">
+              <button type="button" class="password-toggle" data-password-toggle="confirm-password" aria-label="Ø¥Ø¸Ù‡Ø§Ø± ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±" title="Ø¥Ø¸Ù‡Ø§Ø± ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); cursor: pointer;">
+              <input type="checkbox" id="terms" style="accent-color: var(--primary);" required>
+              Ø£ÙˆØ§ÙÙ‚ Ø¹Ù„Ù‰ Ø´Ø±ÙˆØ· Ø§Ù„Ø®Ø¯Ù…Ø© ÙˆØ³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©
+            </label>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ÙŠ</button>
+        </form>
+
+        <div style="margin-top: 24px; text-align: center; font-size: 14px; color: var(--text-secondary);">
+          Ù„Ø¯ÙŠÙƒ Ø­Ø³Ø§Ø¨ Ø¨Ø§Ù„ÙØ¹Ù„ØŸ <a href="login.html" style="color: var(--primary); font-weight: 600;">ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„</a>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="index.html" style="font-size: 13px; color: var(--text-muted);">
+          <i class="fa fa-arrow-right" style="margin-left: 6px;"></i> Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„Ù„ØµÙØ­Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ØªØ¶Ù…ÙŠÙ† Ø§Ù„Ø³ÙƒØ±ÙŠØ¨ØªØ§Øª -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/config.js?v=20260522-render"></script>
+  <script src="js/backend-config.js?v=20260522-render"></script>
+  <script src="js/backend-service.js?v=20260522-render"></script>
+  <script src="js/firestore-service.js?v=20260522-egp"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth-service.js?v=20260522-egp"></script>
+  <script src="js/security.js"></script>
+  <script src="js/router.js?v=20260522-egp"></script>
+  <script src="js/app.js?v=20260522-password-eye"></script>
+  <script src="js/analytics.js?v=20260522-ga"></script>
+  <script src="js/register-page.js?v=20260522-ga"></script>
+</body>
+</html>
+
+
+
+

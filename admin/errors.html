@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ù„ÙˆØ­Ø© Ø§Ù„Ø£Ø®Ø·Ø§Ø¡ ÙˆØ§Ù„Ø£Ù…Ø§Ù† - Ø±Ø¨Ø­ÙŠ</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KC415206EE');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div id="toast-container" class="toast-container"></div>
+  <div id="admin-layout" class="app-layout">
+    <main class="main-content">
+      <div class="page-container">
+        <div class="page-header">
+          <h2>Ù„ÙˆØ­Ø© Ø§Ù„Ø£Ø®Ø·Ø§Ø¡ ÙˆØ§Ù„Ø£Ù…Ø§Ù†</h2>
+          <p>Ù…ØªØ§Ø¨Ø¹Ø© Ø£Ø®Ø·Ø§Ø¡ VASTØŒ ÙØ´Ù„ Ø§Ù„Ù…ÙƒØ§ÙØ¢ØªØŒ Ù…Ø­Ø§ÙˆÙ„Ø§Øª Ø§Ù„ØªÙ„Ø§Ø¹Ø¨ØŒ ÙˆÙ…Ø´Ø§ÙƒÙ„ postback Ø¨Ø¯ÙˆÙ† realtime Ø¯Ø§Ø¦Ù… Ù„ØªÙ‚Ù„ÙŠÙ„ Ø§Ù„Ù‚Ø±Ø§Ø¡Ø©.</p>
+        </div>
+
+        <div class="card filter-bar">
+          <select id="errors-type-filter" class="form-select" style="max-width:260px">
+            <option value="">ÙƒÙ„ Ø§Ù„Ø£Ø®Ø·Ø§Ø¡</option>
+            <option value="reward_claim_failed">ÙØ´Ù„ Ø§Ù„Ù…ÙƒØ§ÙØ¢Øª</option>
+            <option value="vast_proxy_fetch_failed">VAST proxy</option>
+            <option value="timewall_hash_mismatch">TimeWall hash</option>
+            <option value="multi_tab_blocked">Multi-tab</option>
+            <option value="storage_tamper_detected">Storage tamper</option>
+          </select>
+          <button id="errors-refresh-btn" class="btn btn-secondary"><i class="fa fa-rotate"></i> ØªØ­Ø¯ÙŠØ«</button>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom:20px"><i class="fa fa-shield-alt text-warning"></i> Ø¢Ø®Ø± 50 Incident</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ø§Ù„Ù†ÙˆØ¹</th>
+                  <th>Ø§Ù„Ø®Ø·ÙˆØ±Ø©</th>
+                  <th>Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</th>
+                  <th>Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…</th>
+                  <th>Ø§Ù„ØªØ§Ø±ÙŠØ®</th>
+                </tr>
+              </thead>
+              <tbody id="adm-errors-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase.js"></script>
+  <script src="../js/config.js?v=20260522-render"></script>
+  <script src="../js/backend-config.js?v=20260522-render"></script>
+  <script src="../js/backend-service.js?v=20260522-render"></script>
+  <script src="../js/firestore-service.js?v=20260522-egp"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/auth-service.js"></script>
+  <script src="../js/admin-service.js?v=20260522-render"></script>
+  <script src="../js/security.js"></script>
+  <script src="../js/router.js"></script>
+  <script src="../js/app.js?v=20260522-egp"></script>
+  <script src="../js/analytics.js?v=20260522-ga"></script>
+  <script src="../js/admin.js?v=20260522-render"></script>
+</body>
+</html>
+
+

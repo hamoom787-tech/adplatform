@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ø±Ø¨Ø­ÙŠ â€” Ø§Ù„Ù…Ù†ØµØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø£ÙˆÙ„Ù‰ Ù„Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª ÙˆØ§Ù„Ù…ÙƒØ§ÙØ¢Øª</title>
+  <meta name="description" content="Ø´Ø§Ù‡Ø¯ Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© ÙˆØ¢Ù…Ù†Ø©ØŒ ÙˆØ§Ø¬Ù…Ø¹ Ø£Ø±Ø¨Ø§Ø­Ùƒ Ø¨Ø§Ù„Ø¬Ù†ÙŠÙ‡ Ø¨Ø³Ù‡ÙˆÙ„Ø©ØŒ Ø«Ù… Ø§Ø³Ø­Ø¨Ù‡Ø§ Ø¹Ù†Ø¯ Ø§Ù„ÙˆØµÙˆÙ„ Ù„Ù„Ø­Ø¯ Ø§Ù„Ø£Ø¯Ù†Ù‰.">
+  
+  <!-- Ø®Ø·ÙˆØ· Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Ø£ÙŠÙ‚ÙˆÙ†Ø§Øª Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Ø§Ù„Ø£Ù†Ù…Ø§Ø· -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC415206EE');
+  </script>
+</head>
+<body>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       ðŸ”” Ø­Ø§ÙˆÙŠØ© Ø§Ù„Ø¥Ø´Ø¹Ø§Ø±Ø§Øª Ø§Ù„Ù…Ù†Ø¨Ø«Ù‚Ø©
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <div id="toast-container" class="toast-container"></div>
+  
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       ðŸ  â‘  Navigation Bar
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <nav class="navbar" style="position: sticky; top:0; background: rgba(15,14,23,0.92); backdrop-filter: blur(16px); z-index: 1000; border-bottom: 1px solid var(--border); padding: 14px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ðŸ’° Ø±Ø¨Ø­ÙŠ</a>
+      <div style="display: flex; gap: 12px;">
+        <a href="login.html" class="btn btn-secondary btn-sm">Ø¯Ø®ÙˆÙ„</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       ðŸš€ â‘¡ Hero Section
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <header style="padding: 100px 0 60px; overflow: hidden; position: relative;">
+    <div class="container hero-wrapper">
+      <div class="hero-text">
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary-light); border: 1px solid rgba(108,99,255,0.3); border-radius: 999px; padding: 6px 16px; font-size: 13px; color: var(--primary); margin-bottom: 24px;">
+          ðŸŽ‰ <span>Ù…Ù†ØµØ© Ø¹Ø±Ø¨ÙŠØ© Ø¢Ù…Ù†Ø© ÙˆÙ…ØªÙˆØ§ÙÙ‚Ø© 100%</span>
+        </div>
+        <h1 style="margin-bottom: 20px; font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem);">Ø§ÙƒØ³Ø¨ Ø£Ø±Ø¨Ø§Ø­Ùƒ Ø¨Ø§Ù„Ø¬Ù†ÙŠÙ‡ Ù…Ù†<br><span class="text-gradient">Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª</span></h1>
+        <p style="font-size: 17px; color: var(--text-secondary); margin-bottom: 36px; line-height: 1.9; max-width: 550px;">
+          Ø´Ø§Ù‡Ø¯ Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© ÙˆÙ…ØªÙˆØ§ÙÙ‚Ø© Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ù…Ø¹ Ø§Ù„Ø³ÙŠØ§Ø³Ø§Øª Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†ÙŠØ©ØŒ ÙˆØ§Ø¬Ù…Ø¹ Ø£Ø±Ø¨Ø§Ø­Ùƒ Ø¨Ø§Ù„Ø¬Ù†ÙŠÙ‡ Ø¯Ø§Ø®Ù„ Ù…Ø­ÙØ¸ØªÙƒØŒ Ø«Ù… Ø§Ø³Ø­Ø¨Ù‡Ø§ Ø¹Ø¨Ø± ÙˆØ³ÙŠÙ„Ø© Ø§Ù„Ø¯ÙØ¹ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.
+        </p>
+        <div class="hero-btns" style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="register.html" class="btn btn-primary btn-lg">Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ Ù…Ø¬Ø§Ù†ÙŠ</a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg">ÙƒÙŠÙ ØªØ¹Ù…Ù„ Ø§Ù„Ù…Ù†ØµØ©</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-image-mock">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 12px; color: var(--text-muted);">Ø±ØµÙŠØ¯ Ø§Ù„Ø­Ø³Ø§Ø¨</span>
+            <i class="fa fa-coins text-secondary" style="font-size: 20px;"></i>
+          </div>
+          <div style="font-size: 2.2rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">245.50</div>
+          <div style="font-size: 11px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+            <i class="fa fa-arrow-up text-secondary"></i>
+            <span>+45.00 Ø¬Ù†ÙŠÙ‡ Ø§Ù„ÙŠÙˆÙ…</span>
+          </div>
+          <div class="divider" style="margin: 12px 0;"></div>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px;">
+            <span style="color: var(--text-secondary);">Ù…Ø³ØªÙˆÙ‰ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…</span>
+            <span class="badge badge-success">Ø°Ù‡Ø¨ÙŠ ðŸ†</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-top: 8px;">
+            <span style="color: var(--text-secondary);">Ù…Ø´Ø§Ù‡Ø¯Ø§Øª Ø§Ù„ÙŠÙˆÙ…</span>
+            <span>8 / 10 Ø¥Ø¹Ù„Ø§Ù†Ø§Øª</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       âœ¨ â‘¢ Features Section
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section style="padding: 80px 0; background: rgba(255,255,255,0.01); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 48px;">
+        <h2 style="margin-bottom: 12px;">Ù„Ù…Ø§Ø°Ø§ ØªØ®ØªØ§Ø± Ù…Ù†ØµØ© <span class="text-gradient">Ø±Ø¨Ø­ÙŠØŸ</span></h2>
+        <p style="max-width: 600px; margin: 0 auto;">Ù†Ø­Ù† Ù†Ø¶Ø¹ ØªØ¬Ø±Ø¨Ø© Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… ÙˆØ§Ù„Ù…ØµØ¯Ø§Ù‚ÙŠØ© ÙƒØ£ÙˆÙ„ÙˆÙŠØ© Ù‚ØµÙˆÙ‰ ÙˆÙ†Ø¶Ù…Ù† Ø§Ù„Ø´ÙØ§ÙÙŠØ© Ø§Ù„ÙƒØ§Ù…Ù„Ø©.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card text-center" style="padding: 32px 24px;">
+          <div style="font-size: 2.5rem; margin-bottom: 20px;">âš¡</div>
+          <h3 style="margin-bottom: 12px;">Ø³Ù‡Ù„ ÙˆØ³Ø±ÙŠØ¹ Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</h3>
+          <p style="font-size: 14px; line-height: 1.8;">
+            ÙˆØ§Ø¬Ù‡Ø© Ù…ØµÙ…Ù…Ø© Ù„ØªÙ†Ø§Ø³Ø¨ Ù‡Ø§ØªÙÙƒ ÙˆØ§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± Ø§Ù„Ø´Ø®ØµÙŠ. Ø´Ø§Ù‡Ø¯ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† ÙˆØ§Ø­ØµÙ„ Ø¹Ù„Ù‰ Ù…ÙƒØ§ÙØ£ØªÙƒ ÙÙˆØ±Ø§Ù‹.
+          </p>
+        </div>
+        <div class="card text-center" style="padding: 32px 24px;">
+          <div style="font-size: 2.5rem; margin-bottom: 20px;">ðŸ›¡ï¸</div>
+          <h3 style="margin-bottom: 12px;">Ø¢Ù…Ù† ÙˆÙ…ØªÙˆØ§ÙÙ‚ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„</h3>
+          <p style="font-size: 14px; line-height: 1.8;">
+            Ù†Ù„ØªØ²Ù… Ø¨Ø³ÙŠØ§Ø³Ø§Øª Ø¬ÙˆØ¬Ù„ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†ÙŠØ©. Ø¥Ø¹Ù„Ø§Ù†Ø§ØªÙ†Ø§ Ø­Ù‚ÙŠÙ‚ÙŠØ© ÙˆÙ…ØµØ±Ø­ Ø¨Ù‡Ø§ØŒ ÙˆÙ„Ø§ ØªØ¯Ø¹Ùˆ Ù„Ù„Ù†Ù‚Ø±Ø§Øª Ø§Ù„Ø²Ø§Ø¦ÙØ©.
+          </p>
+        </div>
+        <div class="card text-center" style="padding: 32px 24px;">
+          <div style="font-size: 2.5rem; margin-bottom: 20px;">ðŸ’¸</div>
+          <h3 style="margin-bottom: 12px;">Ø³Ø­Ø¨ Ø³Ø±ÙŠØ¹ ÙˆÙ…ØªÙ†ÙˆØ¹</h3>
+          <p style="font-size: 14px; line-height: 1.8;">
+            Ø§Ø¯ÙØ¹ ÙˆØ§Ø³Ø­Ø¨ Ø£Ø±Ø¨Ø§Ø­Ùƒ Ø¹Ø¨Ø± Ù…Ø­Ø§ÙØ¸ Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„ ÙƒÙ€ ÙÙˆØ¯Ø§ÙÙˆÙ† ÙƒØ§Ø´ØŒ Ø¥Ù†Ø³ØªØ§Ø¨Ø§ÙŠØŒ Ø¨Ø§ÙŠ Ø¨Ø§Ù„ ÙˆØ§Ù„ØªØ­ÙˆÙŠÙ„Ø§Øª Ø§Ù„Ø¨Ù†ÙƒÙŠØ©.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       â„¹ï¸ â‘£ How it works Section
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="how-it-works" style="padding: 80px 0;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 48px;">
+        <h2>ÙƒÙŠÙ ØªØ¹Ù…Ù„ Ø§Ù„Ù…Ù†ØµØ©ØŸ</h2>
+        <p>Ø§Ø¨Ø¯Ø£ Ø±Ø­Ù„ØªÙƒ Ù…Ø¹Ù†Ø§ ÙÙŠ 3 Ø®Ø·ÙˆØ§Øª Ø¨Ø³ÙŠØ·Ø© Ù„Ù„ØºØ§ÙŠØ©</p>
+      </div>
+      <div class="grid-3">
+        <div class="text-center" style="padding: 20px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #fff; margin: 0 auto 20px;">1</div>
+          <h3 style="margin-bottom: 10px;">Ø³Ø¬Ù‘Ù„ Ø­Ø³Ø§Ø¨Ùƒ</h3>
+          <p style="font-size: 13px;">Ø£Ù†Ø´Ø¦ Ø­Ø³Ø§Ø¨Ùƒ Ø§Ù„Ù…Ø¬Ø§Ù†ÙŠ ÙÙŠ Ø«ÙˆØ§Ù†Ù Ù…Ø¹Ø¯ÙˆØ¯Ø© Ù„ØªØ­ØµÙ„ Ø¹Ù„Ù‰ 5.00 Ø¬Ù†ÙŠÙ‡ ØªØ±Ø­ÙŠØ¨ÙŠØ© ÙƒÙ‡Ø¯ÙŠØ© Ù…Ø¬Ø§Ù†ÙŠØ© ÙÙˆØ±Ø§Ù‹.</p>
+        </div>
+        <div class="text-center" style="padding: 20px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #fff; margin: 0 auto 20px;">2</div>
+          <h3 style="margin-bottom: 10px;">Ø´Ø§Ù‡Ø¯ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª</h3>
+          <p style="font-size: 13px;">Ø§Ø¯Ø®Ù„ Ù„ØµÙØ­Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§ØªØŒ ÙˆØ´Ø§Ù‡Ø¯ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø§Ù„Ù…ØªØ§Ø­Ø© ÙŠÙˆÙ…ÙŠØ§Ù‹ Ù…Ø¹ Ø§Ù„Ø¹Ø¯Ø§Ø¯ Ø§Ù„Ø¯Ø§Ø¦Ø±ÙŠ Ø­ØªÙ‰ Ø§Ù„Ù†Ù‡Ø§ÙŠØ©.</p>
+        </div>
+        <div class="text-center" style="padding: 20px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #fff; margin: 0 auto 20px;">3</div>
+          <h3 style="margin-bottom: 10px;">Ø§Ø³Ø­Ø¨ Ø£Ø±Ø¨Ø§Ø­Ùƒ</h3>
+          <p style="font-size: 13px;">Ø¹Ù†Ø¯ ÙˆØµÙˆÙ„Ùƒ Ù„Ù„Ø­Ø¯ Ø§Ù„Ø£Ø¯Ù†Ù‰ 50 Ø¬Ù†ÙŠÙ‡ ÙÙ‚Ø·ØŒ Ø§Ø·Ù„Ø¨ Ø³Ø­Ø¨ Ø£Ø±Ø¨Ø§Ø­Ùƒ Ø¹Ø¨Ø± ÙˆØ³ÙŠÙ„ØªÙƒ Ø§Ù„Ù…ÙØ¶Ù„Ø© ÙˆØ³ÙŠØªÙ… ØªØ¬Ù‡ÙŠØ²Ù‡Ø§ ÙÙˆØ±Ø§Ù‹.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       ðŸ“Š â‘¤ Platform Statistics
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section style="padding: 80px 0; background: linear-gradient(135deg, rgba(108,99,255,0.06), rgba(0,212,170,0.03)); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="grid-4" style="text-align: center;">
+        <div>
+          <div style="font-size: 3rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">24,000+</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-top: 8px;">Ù…Ø³ØªØ®Ø¯Ù… Ù†Ø´Ø·</div>
+        </div>
+        <div>
+          <div style="font-size: 3rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">6M+</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-top: 8px;">Ø¥Ø¬Ù…Ø§Ù„ÙŠ Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</div>
+        </div>
+        <div>
+          <div style="font-size: 3rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">150,000+</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-top: 8px;">Ø£Ø±Ø¨Ø§Ø­ Ù…ÙˆØ²Ø¹Ø© ($)</div>
+        </div>
+        <div>
+          <div style="font-size: 3rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">99.4%</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-top: 8px;">Ù†Ø³Ø¨Ø© Ø§Ù„Ø¯ÙØ¹ Ø§Ù„Ù…Ø¶Ù…ÙˆÙ†Ø©</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       ðŸ“¢ â‘¥ CTA Section
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="container" style="padding: 80px 24px; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+    <div class="card glass-card-glow" style="padding: 60px 40px;">
+      <h2 style="margin-bottom: 12px;">Ù‡Ù„ Ø£Ù†Øª Ø¬Ø§Ù‡Ø² Ù„Ø¨Ø¯Ø¡ Ø¬Ù…Ø¹ Ø§Ù„Ø£Ø±Ø¨Ø§Ø­ØŸ</h2>
+      <p style="margin-bottom: 32px; max-width: 550px; margin-left: auto; margin-right: auto;">Ø§Ù†Ø¶Ù… Ø§Ù„ÙŠÙˆÙ… Ù…Ø¬Ø§Ù†Ø§Ù‹ ÙˆØ§Ø­ØµÙ„ Ø¹Ù„Ù‰ 5.00 Ø¬Ù†ÙŠÙ‡ ØªØ±Ø­ÙŠØ¨ÙŠØ© ÙÙˆØ±Ø§Ù‹ ÙƒÙ‡Ø¯ÙŠØ© ØªØ³Ø¬ÙŠÙ„!</p>
+      <a href="register.html" class="btn btn-primary btn-lg">Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ÙŠ Ø§Ù„Ù…Ø¬Ø§Ù†ÙŠ ðŸš€</a>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       <footer> â‘¦ Footer
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer style="border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 13px; background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap;">
+        <a href="privacy-policy.html" style="color: var(--text-muted); text-decoration: none;">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a>
+        <a href="terms-of-service.html" style="color: var(--text-muted); text-decoration: none;">Ø´Ø±ÙˆØ· Ø§Ù„Ø®Ø¯Ù…Ø©</a>
+        <a href="contact-us.html" style="color: var(--text-muted); text-decoration: none;">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a>
+        <a href="dmca.html" style="color: var(--text-muted); text-decoration: none;">DMCA</a>
+      </div>
+      <p>Â© 2026 Ø±Ø¨Ø­ÙŠ â€” Ø§Ù„Ù…Ù†ØµØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ù„Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª ÙˆØ§Ù„Ù…ÙƒØ§ÙØ¢Øª. Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©.</p>
+      <p style="margin-top: 8px; font-size: 11px; opacity: 0.5;">
+        Ø¬Ù…ÙŠØ¹ Ø§Ù„Ù…ÙˆØ§Ø¯ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†ÙŠØ© Ø§Ù„Ù…Ø¹Ø±ÙˆØ¶Ø© ØªØ®Ø¶Ø¹ Ù„Ø³ÙŠØ§Ø³Ø§Øª ÙˆØªØ±Ø§Ø®ÙŠØµ Ø§Ù„Ø£Ù†Ø¸Ù…Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†ÙŠØ© Ø§Ù„Ù…Ø¹ØªÙ…Ø¯Ø© Ø¹Ø§Ù„Ù…ÙŠØ§Ù‹.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/config.js?v=20260522-render"></script>
+  <script src="js/backend-config.js?v=20260522-render"></script>
+  <script src="js/backend-service.js?v=20260522-render"></script>
+  <script src="js/firestore-service.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/security.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/analytics.js?v=20260522-ga"></script>
+</body>
+</html>
+
+
+
+

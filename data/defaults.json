@@ -1,0 +1,60 @@
+{
+    "settings":  {
+                     "version":  "1.0.0",
+                     "registrationEnabled":  true,
+                     "withdrawalsEnabled":  true,
+                     "earnPerView":  0.50,
+                     "adDuration":  15,
+                     "minWithdraw":  50,
+                     "maxDailyViews":  10,
+                     "cooldownBetweenAds":  5
+                 },
+    "ads":  [
+                {
+                    "id":  "ad-1",
+                    "title":  "عرض حصري على التسوق الإلكتروني لشهر مايو",
+                    "category":  "تجارة",
+                    "duration":  15,
+                    "reward":  0.50,
+                    "active":  true
+                },
+                {
+                    "id":  "ad-2",
+                    "title":  "تعلم البرمجة وتطوير الويب مجانًا خطوة بخطوة",
+                    "category":  "تعليم",
+                    "duration":  15,
+                    "reward":  0.50,
+                    "active":  true
+                },
+                {
+                    "id":  "ad-3",
+                    "title":  "تطبيق التوصيل السريع - اطلب الآن ووفر 50%",
+                    "category":  "خدمات",
+                    "duration":  15,
+                    "reward":  0.75,
+                    "active":  true
+                },
+                {
+                    "id":  "ad-4",
+                    "title":  "أفضل عروض السفر الصيفية للفنادق والرحلات",
+                    "category":  "سياحة",
+                    "duration":  20,
+                    "reward":  1.00,
+                    "active":  true
+                },
+                {
+                    "id":  "ad-5",
+                    "title":  "منصة الاستثمار والداول الذكي للأصول الرقمية",
+                    "category":  "مال",
+                    "duration":  30,
+                    "reward":  1.50,
+                    "active":  true
+                }
+            ],
+    "users":  [
+
+              ],
+    "withdrawals":  [
+
+                    ]
+}

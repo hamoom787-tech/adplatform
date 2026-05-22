@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª â€” Ø±Ø¨Ø­ÙŠ</title>
+  
+  <!-- Ø®Ø·ÙˆØ· Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Ø£ÙŠÙ‚ÙˆÙ†Ø§Øª Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Ø§Ù„Ø£Ù†Ù…Ø§Ø· -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC415206EE');
+  </script>
+</head>
+<body>
+
+  <!-- Ø­Ø§ÙˆÙŠØ© Ø§Ù„Ø¥Ø´Ø¹Ø§Ø±Ø§Øª -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <div class="app-layout">
+    
+    <!-- ðŸ“± Ù‡ÙŠØ¯Ø± Ø§Ù„Ù…ÙˆØ¨Ø§ÙŠÙ„ -->
+    <header class="mobile-header">
+      <button id="mobile-menu-toggle" style="font-size: 20px; color: var(--text-primary);">
+        <i class="fa fa-bars"></i>
+      </button>
+      <span style="font-size: 1.2rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ðŸ’° Ø±Ø¨Ø­ÙŠ</span>
+      <div class="js-user-avatar user-avatar" style="width: 32px; height: 32px; font-size: 13px;">ØŸ</div>
+    </header>
+
+    <!-- ðŸ—‚ï¸ Ø§Ù„Ø³Ø§ÙŠØ¯Ø¨Ø§Ø± -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ðŸ’° Ø±Ø¨Ø­ÙŠ</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa fa-home"></i> Ù„ÙˆØ­Ø© Ø§Ù„ØªØ­ÙƒÙ…
+        </a>
+        <a href="ads.html" class="sidebar-link active">
+          <i class="fa fa-play-circle"></i> Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa fa-wallet"></i> Ø§Ù„Ø³Ø­Ø¨ ÙˆØ§Ù„Ù…Ø­ÙØ¸Ø©
+        </a>
+        <a href="admin/index.html" class="sidebar-link js-admin-link" style="display: none; color: var(--warning);">
+          <i class="fa fa-shield-alt"></i> Ù„ÙˆØ­Ø© Ø§Ù„Ø£Ø¯Ù…Ù†
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-mini">
+          <div class="js-user-avatar user-avatar">ØŸ</div>
+          <div class="user-info">
+            <div class="js-user-name user-name">Ø¬Ø§Ø±ÙŠ Ø§Ù„ØªØ­Ù…ÙŠÙ„...</div>
+            <div class="user-role">
+              <span class="js-user-level">Ø¹Ø¶Ùˆ</span>
+              <i class="fa fa-gem" style="color: var(--primary); font-size: 10px;"></i>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="sidebar-link js-logout-btn" style="margin-top: 16px; color: var(--accent); padding: 8px 12px; font-size: 14px;">
+          <i class="fa fa-sign-out-alt"></i> ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø®Ø±ÙˆØ¬
+        </a>
+        <div class="sidebar-legal-links" aria-label="Ø±ÙˆØ§Ø¨Ø· Ø§Ù„ØµÙØ­Ø§Øª Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="contact-us.html">Contact Us</a>
+          <a href="dmca.html">DMCA</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ðŸ’» Ø§Ù„Ù‚Ø³Ù… Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ -->
+    <main class="main-content">
+      
+      <!-- Ø§Ù„ØªÙˆØ¨Ø¨Ø§Ø± -->
+      <div class="topbar">
+        <h4>Ù…Ù†ØµØ© Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª ðŸ“º</h4>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="circle-btn">
+            <i class="fa fa-moon"></i>
+          </button>
+          <div class="nav-balance">
+            <i class="fa fa-coins"></i>
+            <span class="js-user-balance">0.00 Ø¬Ù†ÙŠÙ‡</span>
+          </div>
+          <button class="circle-btn js-logout-btn" style="color: var(--accent);">
+            <i class="fa fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª -->
+      <div class="page-container">
+        
+        <div class="page-header">
+          <h2>Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª ÙˆØ§Ù„Ù…ÙƒØ§ÙØ¢Øª</h2>
+          <p>Ø´Ø§Ù‡Ø¯ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø§Ù„Ù…ØªØ§Ø­Ø© ÙŠÙˆÙ…ÙŠØ§Ù‹ ÙƒØ§Ù…Ù„Ø© ÙˆØ§ÙƒØ³Ø¨ Ø£Ø±Ø¨Ø§Ø­Ø§Ù‹ Ø¨Ø§Ù„Ø¬Ù†ÙŠÙ‡ ØªÙØ¶Ø§Ù ÙÙˆØ±Ø§Ù‹ Ù„Ù…Ø­ÙØ¸ØªÙƒ Ø§Ù„Ø´Ø®ØµÙŠØ©.</p>
+        </div>
+
+        <!-- Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª Ø³Ø±ÙŠØ¹Ø© ÙÙŠ ØµÙØ­Ø© Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© -->
+        <div class="grid-3" style="margin-bottom: 28px;">
+          <div class="stat-card" style="align-items: center; text-align: center; padding: 18px 24px;">
+            <div id="w-today-views" class="stat-value" style="font-size: 1.8rem;">0</div>
+            <div class="stat-label">Ù…Ø´Ø§Ù‡Ø¯Ø§ØªÙƒ Ø§Ù„ÙŠÙˆÙ…</div>
+          </div>
+          <div class="stat-card" style="align-items: center; text-align: center; padding: 18px 24px;">
+            <div id="w-limit-views" class="stat-value" style="font-size: 1.8rem; color: var(--secondary);">10</div>
+            <div class="stat-label">Ø§Ù„Ø­Ø¯ Ø§Ù„ÙŠÙˆÙ…ÙŠ Ø§Ù„Ù…ØªØ§Ø­</div>
+          </div>
+          <div class="stat-card" style="align-items: center; text-align: center; padding: 18px 24px;">
+            <div id="w-countdown-reset" class="stat-value" style="font-size: 1.8rem; color: var(--warning);">00:00:00</div>
+            <div class="stat-label">Ø¥Ø¹Ø§Ø¯Ø© ØªØ¹ÙŠÙŠÙ† Ø§Ù„ÙŠÙˆÙ… Ø¨Ø¹Ø¯</div>
+          </div>
+        </div>
+
+        <div class="watch-grid">
+          
+          <!-- Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† ÙˆØ§Ù„Ø¹Ø¯Ø§Ø¯ -->
+          <div class="ad-player-card">
+            
+            <div class="ad-viewport" id="ad-viewport-box" style="position: relative; padding: 24px; min-height: 280px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <!-- Badges -->
+              <span id="ad-category" class="badge badge-primary" style="position: absolute; top: 20px; right: 20px; z-index: 10;">ØªØµÙ†ÙŠÙ</span>
+              <span id="ad-reward" class="badge badge-success" style="position: absolute; top: 20px; left: 20px; font-weight: 700; z-index: 10;">0.50 Ø¬Ù†ÙŠÙ‡</span>
+              
+              <!-- Idle Viewport (Title & Description) -->
+              <div id="ad-idle-view" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div id="ad-placeholder-icon" style="margin-bottom: 16px;">
+                  <i class="fa fa-ad" style="font-size: 3rem; color: var(--primary); opacity: 0.6;"></i>
+                </div>
+                <h3 id="ad-title" style="margin-bottom: 12px; font-size: 1.3rem;">Ø¹Ù†ÙˆØ§Ù† Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† Ø§Ù„Ø§ÙØªØ±Ø§Ø¶ÙŠ</h3>
+                <p id="ad-desc" style="color: var(--text-secondary); font-size: 13px; max-width: 80%; line-height: 1.8;">Ø§Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø²Ø± "Ø¨Ø¯Ø¡ Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø©" Ø¨Ø§Ù„Ø£Ø³ÙÙ„ Ù„Ø¨Ø¯Ø¡ ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† ÙˆØ¬Ù…Ø¹ Ø§Ù„Ù…ÙƒØ§ÙØ£Ø©. ÙŠØ¬Ø¨ Ø¹Ø¯Ù… Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„ØµÙØ­Ø©.</p>
+              </div>
+
+              <!-- Sandboxed Ad Render Viewport (Hidden by default) -->
+              <div id="ad-sandbox-viewport" style="display: none; width: 100%; height: 100%; min-height: 200px;">
+                <!-- dynamic iframe injected here -->
+              </div>
+
+              <!-- Skeleton Loader Viewport (Hidden by default) -->
+              <div id="ad-skeleton" class="skeleton-ad" style="display: none; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 16px; pointer-events: none;">
+                <div class="skeleton-circle"></div>
+                <div class="skeleton-line title"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+              </div>
+
+              <!-- Error State Panel (Hidden by default) -->
+              <div id="ad-error-display" class="ad-error-display" style="display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--accent); text-align: center; width: 100%;">
+                <i class="fa fa-exclamation-triangle" style="font-size: 3rem; color: var(--accent); opacity: 0.8;"></i>
+                <h4 class="error-title" style="font-size: 1.1rem; font-weight: 700;">ÙØ´Ù„ ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</h4>
+                <p class="error-text" style="font-size: 12px; max-width: 85%;">ØªÙˆÙ‚Ù ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† Ù„Ø£Ø³Ø¨Ø§Ø¨ Ø£Ù…Ù†ÙŠØ© Ø£Ùˆ Ø­Ø¯ÙˆØ« Ø¹Ø·Ù„.</p>
+              </div>
+
+              <!-- Success Overlay (Hidden by default) -->
+              <div id="ad-success-overlay" class="success-overlay">
+                <div class="success-glow-ring">âœ“</div>
+                <h3 style="color: var(--secondary); font-weight: 700; margin-bottom: 8px;">ØªÙ‡Ø§Ù†ÙŠÙ†Ø§! ØªÙ… Ø§Ø­ØªØ³Ø§Ø¨ Ø§Ù„Ø¬Ø§Ø¦Ø²Ø©</h3>
+                <p style="font-size: 13px; color: #a7a9be;">ØªÙ… Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ù…ÙƒØ§ÙØ£Ø© ÙˆØ§Ù„Ø£Ø±Ø¨Ø§Ø­ Ù„Ø­Ø³Ø§Ø¨Ùƒ Ø¨Ù†Ø¬Ø§Ø­.</p>
+              </div>
+            </div>
+
+            <!-- Ø¹Ø¯Ø§Ø¯ Ø¯Ø§Ø¦Ø±ÙŠ Canvas -->
+            <div class="timer-container">
+              <canvas id="timer-canvas" width="130" height="130"></canvas>
+            </div>
+
+            <!-- Ø´Ø±ÙŠØ· ØªÙ‚Ø¯Ù… Ø®Ø·ÙŠ Ø³ÙÙ„ÙŠ -->
+            <div class="progress-container" style="margin-bottom: 24px;">
+              <div class="progress-bar-bg" style="height: 6px;">
+                <div id="ad-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Ø­Ø§Ù„Ø© Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© -->
+            <div id="ad-status-msg" style="margin-bottom: 20px; font-weight: 600; font-size: 14px; min-height: 24px;">
+              <!-- Ø±Ø³Ø§Ø¦Ù„ Ø§Ù„Ø­Ø§Ù„Ø© -->
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 12px;">
+              <button id="start-ad-btn" class="btn btn-primary btn-lg">â–¶ Ø¨Ø¯Ø¡ Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø©</button>
+              <button id="next-ad-btn" class="btn btn-secondary btn-lg" style="display: none;">Ø§Ù„ØªØ§Ù„ÙŠ â†</button>
+            </div>
+
+          </div>
+
+          <!-- Ø´Ø±ÙˆØ· ÙˆØªØ¹Ù„ÙŠÙ…Ø§Øª ÙˆØ¬Ø§Ù†Ø¨ÙŠØ§Øª -->
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div class="card">
+              <h3 style="margin-bottom: 16px;"><i class="fa fa-info-circle text-primary"></i> Ø´Ø±ÙˆØ· Ø§Ø­ØªØ³Ø§Ø¨ Ø§Ù„Ù…ÙƒØ§ÙØ£Ø©</h3>
+              <ul style="padding-right: 20px; font-size: 13px; color: var(--text-secondary); line-height: 2.2;">
+                <li>ÙŠØ¬Ø¨ Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ø¯ÙˆÙ† Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„ØµÙØ­Ø© Ø£Ùˆ ØªØ¨ÙˆÙŠØ¨ Ø§Ù„Ù…ØªØµÙØ­.</li>
+                <li>ØªÙØ¶Ø§Ù Ø§Ù„Ù…ÙƒØ§ÙØ£Ø© Ø¨Ø§Ù„Ø¬Ù†ÙŠÙ‡ ØªÙ„Ù‚Ø§Ø¦ÙŠØ§Ù‹ Ø¨Ù…Ø¬Ø±Ø¯ ÙˆØµÙˆÙ„ Ø§Ù„Ø¹Ø¯Ø§Ø¯ Ø¥Ù„Ù‰ Ø§Ù„Ù†Ù‡Ø§ÙŠØ©.</li>
+                <li>ÙŠÙ…Ù†Ø¹ Ø§Ù„Ù†Ø¸Ø§Ù… Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø¨Ø±Ù…Ø¬ÙŠØ§Øª Ù†Ù‚Ø± ØªÙ„Ù‚Ø§Ø¦ÙŠ Ø£Ùˆ ØªØ­Ø§ÙŠÙ„.</li>
+                <li>Ù‡Ù†Ø§Ùƒ ÙØªØ±Ø© ØªÙ‡Ø¯Ø¦Ø© (Cooldown) Ø¥Ø¬Ø¨Ø§Ø±ÙŠØ© ØªØ¨Ù„Øº <span id="cooldown-seconds-display">5</span> Ø«ÙˆØ§Ù†Ù Ø¨ÙŠÙ† ÙƒÙ„ Ø¥Ø¹Ù„Ø§Ù† ÙˆØªØ§Ù„Ù.</li>
+              </ul>
+            </div>
+
+            <div class="card glass-card-glow" style="padding: 24px;">
+              <h3 style="margin-bottom: 12px;"><i class="fa fa-shield-alt text-secondary"></i> ØªÙˆØ§ÙÙ‚ ØªØ§Ù… ÙˆØ£Ù…Ø§Ù†</h3>
+              <p style="font-size: 12px; color: var(--text-muted); line-height: 1.8;">
+                Ù†Ø­Ù† Ù†Ù‡ØªÙ… Ø¨Ø£Ù…Ø§Ù† Ø­Ø³Ø§Ø¨Ùƒ ÙˆØ³ÙŠØ§Ø³ØªÙ†Ø§ Ù…ØªÙˆØ§ÙÙ‚Ø© Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ù…Ø¹ Ù‚ÙˆØ§Ø¹Ø¯ Google Ads Ùˆ Google AdSense Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†ÙŠØ© Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© Ø§Ù„ÙÙŠØ¯ÙŠÙˆÙ‡Ø§Øª ÙˆØ§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø§Ù„Ù…Ø±ÙˆØ¬Ø©.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ðŸ“± Ø´Ø±ÙŠØ· Ø§Ù„ØªÙ†Ù‚Ù„ Ø§Ù„Ø³ÙÙ„ÙŠ Ù„Ù„Ù‡ÙˆØ§ØªÙ -->
+    <nav class="mobile-nav">
+      <a href="dashboard.html" class="mobile-nav-item">
+        <i class="fa fa-home"></i><span>Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</span>
+      </a>
+      <a href="ads.html" class="mobile-nav-item active">
+        <i class="fa fa-play-circle"></i><span>Ù…Ø´Ø§Ù‡Ø¯Ø©</span>
+      </a>
+      <a href="wallet.html" class="mobile-nav-item">
+        <i class="fa fa-wallet"></i><span>Ø§Ù„Ù…Ø­ÙØ¸Ø©</span>
+      </a>
+      <a href="#" class="mobile-nav-item js-logout-btn" style="color: var(--accent);">
+        <i class="fa fa-sign-out-alt"></i><span>Ø®Ø±ÙˆØ¬</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- ØªØ¶Ù…ÙŠÙ† Ø§Ù„Ø³ÙƒØ±ÙŠØ¨ØªØ§Øª -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/config.js?v=20260522-render"></script>
+  <script src="js/backend-config.js?v=20260522-render"></script>
+  <script src="js/backend-service.js?v=20260522-render"></script>
+  <script src="js/firestore-service.js?v=20260522-egp"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/security.js"></script>
+  <script src="js/router.js?v=20260522-egp"></script>
+  <script src="js/app.js?v=20260522-egp"></script>
+  <script src="js/analytics.js?v=20260522-ga"></script>
+  <script src="js/ad-normalizer.js?v=20260522-vast"></script>
+  <script src="js/ad-engine.js?v=20260522-vast"></script>
+  <script src="js/ads.js?v=20260522-ga"></script>
+</body>
+</html>
+
+
+
+

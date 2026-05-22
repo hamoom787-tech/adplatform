@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª â€” Ø±Ø¨Ø­ÙŠ (Ø§Ù„Ø¥Ø¯Ø§Ø±Ø©)</title>
+  
+  <!-- Ø®Ø·ÙˆØ· Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Ø£ÙŠÙ‚ÙˆÙ†Ø§Øª Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Ø§Ù„Ø£Ù†Ù…Ø§Ø· -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC415206EE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC415206EE');
+  </script>
+</head>
+<body>
+
+  <!-- Ø­Ø§ÙˆÙŠØ© Ø§Ù„Ø¥Ø´Ø¹Ø§Ø±Ø§Øª -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Ø§Ù„Ù‡ÙŠÙƒÙ„ Ø§Ù„Ø¹Ø§Ù… Ù„Ù„ØªØ·Ø¨ÙŠÙ‚ Ø§Ù„Ø¥Ø¯Ø§Ø±ÙŠ -->
+  <div id="admin-layout" class="app-layout">
+    
+    <!-- Ø§Ù„Ù‚Ø³Ù… Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ (Main Content) -->
+    <main class="main-content">
+      
+      <!-- Ù…Ø­ØªÙˆÙ‰ Ø§Ù„ØµÙØ­Ø© Ø§Ù„ÙØ¹Ù„ÙŠ -->
+      <div class="page-container">
+        
+        <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2>Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª ÙˆØ§Ù„Ù…ÙƒØ§ÙØ¢Øª ðŸ“º</h2>
+            <p>Ø£Ø¶Ù Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø¬Ø¯ÙŠØ¯Ø©ØŒ Ø­Ø¯Ø¯ Ù…Ø¯Ø© Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø©ØŒ Ù…ÙƒØ§ÙØ£Ø© ÙƒÙ„ Ø¥Ø¹Ù„Ø§Ù†ØŒ Ø£Ùˆ Ù‚Ù… Ø¨ØªØ¹Ø·ÙŠÙ„/Ø­Ø°Ù Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø§Ù„Ø­Ø§Ù„ÙŠØ© ÙˆÙ…ØªØ§Ø¨Ø¹Ø© ØµØ­ØªÙ‡Ø§.</p>
+          </div>
+          <button id="open-add-ad-btn" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Ø¥Ø¶Ø§ÙØ© Ø¥Ø¹Ù„Ø§Ù† Ø¬Ø¯ÙŠØ¯</button>
+        </div>
+
+        <!-- ÙÙ„Ø§ØªØ± Ø§Ù„Ø¨Ø­Ø« ÙˆØ§Ù„ÙØ±Ø² ÙˆØ§Ù„ØªØ­ÙƒÙ… Ø§Ù„Ø¹Ø§Ù… -->
+        <div class="filter-bar">
+          <div class="search-input-wrap">
+            <i class="fa fa-search"></i>
+            <input type="text" id="ad-search" class="form-input" placeholder="Ø§Ø¨Ø­Ø« Ø¨Ø§Ø³Ù… Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† Ø£Ùˆ Ø§Ù„ØªØµÙ†ÙŠÙ...">
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <select id="ad-type-filter" class="form-input" style="width: 140px;">
+              <option value="all">ÙƒÙ„ Ø§Ù„Ø£Ù†ÙˆØ§Ø¹</option>
+              <option value="html">HTML</option>
+              <option value="script">Script</option>
+              <option value="iframe">Iframe</option>
+              <option value="vast">VAST Video</option>
+              <option value="adsense">AdSense</option>
+            </select>
+            <select id="ad-status-filter" class="form-input" style="width: 140px;">
+              <option value="all">ÙƒÙ„ Ø§Ù„Ø­Ø§Ù„Ø§Øª</option>
+              <option value="good">Ø³Ù„ÙŠÙ… (Ù†Ø´Ø·)</option>
+              <option value="disabled">Ù…Ø¹Ø·Ù„</option>
+              <option value="error">Ù…Ø¹Ø·ÙˆØ¨ (ÙƒØ±Ø§Ø´)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Ø£Ø²Ø±Ø§Ø± Ø§Ù„Ø¹Ù…Ù„ÙŠØ§Øª Ø§Ù„Ø¬Ù…Ø§Ø¹ÙŠØ© (Bulk Actions) -->
+        <div id="bulk-actions-wrap" style="display: none; align-items: center; gap: 12px; margin-bottom: 16px; padding: 12px 16px; background: rgba(108,99,255,0.08); border: 1px solid rgba(108,99,255,0.15); border-radius: var(--radius-md);">
+          <span style="font-size: 13px; color: var(--text-primary); font-weight: 600;"><i class="fa fa-check-square"></i> ØªÙ… ØªØ­Ø¯ÙŠØ¯ <span id="selected-count">0</span> Ø¥Ø¹Ù„Ø§Ù†Ø§Øª:</span>
+          <button id="bulk-toggle-btn" class="btn btn-sm btn-secondary"><i class="fa fa-eye-slash"></i> ØªÙØ¹ÙŠÙ„/ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ù…Ø­Ø¯Ø¯</button>
+          <button id="bulk-delete-btn" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Ø­Ø°Ù Ø§Ù„Ù…Ø­Ø¯Ø¯</button>
+        </div>
+
+        <!-- Ø¬Ø¯ÙˆÙ„ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª -->
+        <div class="card">
+          <h3 style="margin-bottom: 20px;"><i class="fa fa-ad text-secondary"></i> Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø§Ù„Ù…ØªÙˆÙØ±Ø© ÙÙŠ Ø§Ù„Ù†Ø¸Ø§Ù… ÙˆØ§Ù„ØªØ­Ù„ÙŠÙ„Ø§Øª</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 40px; text-align: center;"><input type="checkbox" id="select-all-ads"></th>
+                  <th>Ø¹Ù†ÙˆØ§Ù† Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</th>
+                  <th>Ø§Ù„ØªØµÙ†ÙŠÙ ÙˆØ§Ù„Ù†ÙˆØ¹</th>
+                  <th>Ø§Ù„Ù…Ø¯Ø© ÙˆØ§Ù„Ù…ÙƒØ§ÙØ£Ø©</th>
+                  <th>Ø§Ù„ØªØ­Ù„ÙŠÙ„Ø§Øª (Ø¸Ù‡ÙˆØ±/Ø¥ÙƒÙ…Ø§Ù„/ÙˆÙ‚Øª)</th>
+                  <th>ØµØ­Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</th>
+                  <th>Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø§Ù„ØªØ­ÙƒÙ…</th>
+                </tr>
+              </thead>
+              <tbody id="adm-ads-tbody">
+                <!-- Ø¯ÙŠÙ†Ø§Ù…ÙŠÙƒÙŠ -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       ðŸ’¡ Ù†Ø§ÙØ°Ø© Ø¥Ø¶Ø§ÙØ© Ø¥Ø¹Ù„Ø§Ù† Ø¬Ø¯ÙŠØ¯ (Add Ad Modal)
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <div id="modal-add-ad" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-title-text"><i class="fa fa-plus-circle text-primary"></i> Ø¥Ø¶Ø§ÙØ© Ø¥Ø¹Ù„Ø§Ù† Ø¬Ø¯ÙŠØ¯ Ù„Ù„Ù†Ø¸Ø§Ù…</h3>
+        <button type="button" id="close-add-ad-modal" class="modal-close">&times;</button>
+      </div>
+      <form id="add-ad-form">
+        <input type="hidden" id="ad-edit-id" value="">
+        
+        <div class="form-group">
+          <label>Ø¹Ù†ÙˆØ§Ù† Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† Ø§Ù„Ù…Ø±ÙˆØ¬</label>
+          <input type="text" id="ad-form-title" class="form-input" placeholder="Ù…Ø«Ø§Ù„: Ø®ØµÙ… 50% Ø¹Ù„Ù‰ Ø§Ù„Ø¯ÙˆØ±Ø© Ø§Ù„ØªØ¹Ù„ÙŠÙ…ÙŠØ© Ø§Ù„Ø¬Ø¯ÙŠØ¯Ø©" required>
+        </div>
+
+        <div class="grid-2" style="gap: 16px;">
+          <div class="form-group">
+            <label>ØªØµÙ†ÙŠÙ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</label>
+            <input type="text" id="ad-form-category" class="form-input" placeholder="Ù…Ø«Ø§Ù„: ØªØ¹Ù„ÙŠÙ…ØŒ ØªØ¬Ø§Ø±Ø©ØŒ Ø³ÙŠØ§Ø­Ø©" required>
+          </div>
+          <div class="form-group">
+            <label>Ù†ÙˆØ¹ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</label>
+            <select id="ad-form-type" class="form-input" required>
+              <option value="html">HTML Ù…Ø®ØµØµ</option>
+              <option value="script">Ø³ÙƒØ±ÙŠØ¨Øª JavaScript Ù…Ø®ØµØµ</option>
+              <option value="iframe">Ø±Ø§Ø¨Ø· Ø®Ø§Ø±Ø¬ÙŠ ØªÙ„Ù‚Ø§Ø¦ÙŠ</option>
+              <option value="vast">Ø±Ø§Ø¨Ø· / XML Ø¥Ø¹Ù„Ø§Ù† ÙÙŠØ¯ÙŠÙˆ VAST</option>
+              <option value="adsense">ÙƒÙˆØ¯ Google AdSense</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap: 16px;">
+          <div class="form-group">
+            <label>Ù…Ø¯Ø© Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø© (Ø«ÙˆØ§Ù†Ù)</label>
+            <input type="number" id="ad-form-duration" class="form-input" placeholder="15" min="5" value="15" required>
+          </div>
+          <div class="form-group">
+            <label>Ø§Ù„Ù…ÙƒØ§ÙØ£Ø© Ø§Ù„Ù…Ù…Ù†ÙˆØ­Ø© (Ø¬Ù†ÙŠÙ‡)</label>
+            <input type="number" id="ad-form-reward" class="form-input" placeholder="0.50" min="0.05" step="0.05" value="0.50" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ÙƒÙˆØ¯ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† / Ø§Ù„Ø±Ø§Ø¨Ø·</label>
+          <textarea id="ad-form-code" class="form-input" rows="4" placeholder="Ø£Ø¯Ø®Ù„ ÙƒÙˆØ¯ HTMLØŒ ÙƒÙˆØ¯ Ø§Ù„Ø³ÙƒØ±ÙŠØ¨ØªØŒ Ø£Ùˆ Ø±Ø§Ø¨Ø· URL..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>ÙˆØµÙ Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†</label>
+          <textarea id="ad-form-desc" class="form-input" rows="2" placeholder="Ø£Ø¯Ø®Ù„ ÙˆØµÙÙ‹Ø§ ØªÙØµÙŠÙ„ÙŠÙ‹Ø§ Ø¨Ø³ÙŠØ·Ù‹Ø§ Ù„Ù„Ø¥Ø¹Ù„Ø§Ù† Ù„Ù„Ù…Ø´Ø§Ù‡Ø¯ÙŠÙ†..."></textarea>
+        </div>
+
+        <!-- ØºÙ„Ø§Ù Ø§Ù„Ù…Ø¹Ø§ÙŠÙ†Ø© Ø§Ù„Ù…Ø¹Ø²ÙˆÙ„Ø© Ø§Ù„Ù…Ø¨Ø§Ø´Ø±Ø© -->
+        <div class="form-group" style="margin-top: 16px;">
+          <button type="button" id="preview-ad-btn" class="btn btn-secondary btn-block"><i class="fa fa-play-circle"></i> ØªØ¬Ø±Ø¨Ø© ÙˆÙ…Ø¹Ø§ÙŠÙ†Ø© Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† Ù…Ø¹Ø²ÙˆÙ„Ø§Ù‹ ðŸ”</button>
+        </div>
+        <div id="preview-ad-container-wrap" style="display: none; margin-top: 12px; border: 1.5px dashed var(--border); border-radius: var(--radius-md); overflow: hidden; padding: 12px; background: rgba(0,0,0,0.25);">
+          <h5 style="margin-bottom: 8px; font-size: 13px; color: var(--text-secondary);"><i class="fa fa-eye"></i> Ù…Ø¹Ø§ÙŠÙ†Ø© Ø­ÙŠØ© Ù…Ø¹Ø²ÙˆÙ„Ø©:</h5>
+          <div id="admin-ad-preview-viewport" style="width: 100%; height: 180px; overflow: hidden; border-radius: 6px; background: #121220; display: flex; align-items: center; justify-content: center; position: relative;">
+            <!-- sandbox inside -->
+          </div>
+        </div>
+
+        <button type="submit" id="form-submit-btn" class="btn btn-primary btn-block" style="margin-top: 20px;">Ø­ÙØ¸ ÙˆÙ†Ø´Ø± Ø§Ù„Ø¥Ø¹Ù„Ø§Ù† ðŸš€</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ØªØ¶Ù…ÙŠÙ† Ø§Ù„Ø³ÙƒØ±ÙŠØ¨ØªØ§Øª -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase.js"></script>
+  <script src="../js/config.js?v=20260522-render"></script>
+  <script src="../js/backend-config.js?v=20260522-render"></script>
+  <script src="../js/backend-service.js?v=20260522-render"></script>
+  <script src="../js/firestore-service.js?v=20260522-egp"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/auth-service.js"></script>
+  <script src="../js/admin-service.js?v=20260522-render"></script>
+  <script src="../js/security.js"></script>
+  <script src="../js/router.js"></script>
+  <script src="../js/app.js?v=20260522-egp"></script>
+  <script src="../js/ad-normalizer.js?v=20260522-vast"></script>
+  <script src="../js/ad-engine.js?v=20260522-vast"></script>
+  <script src="../js/modal-bridge.js"></script>
+  <script src="../js/analytics.js?v=20260522-ga"></script>
+  <script src="../js/admin.js?v=20260522-ga"></script>
+</body>
+</html>
+
+
+
+

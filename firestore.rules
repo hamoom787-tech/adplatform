@@ -1,0 +1,155 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn() && request.auth.token.admin == true;
+    }
+
+    function isModerator() {
+      return isAdmin() || (signedIn() && request.auth.token.moderator == true);
+    }
+
+    function isSelf(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function changedOnly(fields) {
+      return request.resource.data.diff(resource.data).changedKeys().hasOnly(fields);
+    }
+
+    function publicAdCounterUpdate() {
+      return signedIn()
+        && changedOnly(['impressions', 'lastShownAt'])
+        && request.resource.data.impressions >= resource.data.impressions;
+    }
+
+    function publicAdSkipUpdate() {
+      return signedIn()
+        && changedOnly(['skippedViews'])
+        && request.resource.data.skippedViews >= resource.data.skippedViews;
+    }
+
+    match /settings/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /ads/{adId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+      allow update: if publicAdCounterUpdate() || publicAdSkipUpdate();
+    }
+
+    match /users/{uid} {
+      allow read: if isAdmin() || isModerator() || isSelf(uid);
+
+      allow create: if isSelf(uid)
+        && request.resource.data.id == uid
+        && request.resource.data.role == 'user'
+        && request.resource.data.password == null
+        && request.resource.data.balance == 5.00;
+
+      allow create, update, delete: if isAdmin();
+
+      // Profile-only self edits. Financial fields are server-only through the Render backend.
+      allow update: if isSelf(uid)
+        && request.resource.data.role == resource.data.role
+        && request.resource.data.password == null
+        && changedOnly(['name', 'phone', 'avatar', 'preferences', 'lastSeenAt']);
+    }
+
+    match /withdrawals/{withdrawalId} {
+      allow read: if isAdmin() || isModerator() || (signedIn() && resource.data.userId == request.auth.uid);
+      allow create, update, delete: if false;
+    }
+
+    match /adAnalytics/{adId} {
+      allow read: if isAdmin() || isModerator();
+
+      allow create: if signedIn()
+        && request.resource.data.id == adId
+        && request.resource.data.keys().hasOnly(['id', 'impressions', 'lastShownAt']);
+
+      allow create: if signedIn()
+        && request.resource.data.id == adId
+        && request.resource.data.keys().hasOnly(['id', 'skippedViews']);
+
+      allow update: if signedIn()
+        && request.resource.data.id == adId
+        && request.resource.data.diff(resource.data).changedKeys().hasOnly(['impressions', 'lastShownAt'])
+        && request.resource.data.impressions >= resource.data.impressions;
+
+      allow update: if signedIn()
+        && request.resource.data.id == adId
+        && request.resource.data.diff(resource.data).changedKeys().hasOnly(['skippedViews'])
+        && request.resource.data.skippedViews >= resource.data.skippedViews;
+
+      allow delete: if isAdmin();
+    }
+
+    match /cooldowns/{uid} {
+      allow read: if isAdmin() || isModerator() || isSelf(uid);
+      allow create, update: if isSelf(uid)
+        && request.resource.data.userId == uid
+        && request.resource.data.until is number
+        && request.resource.data.seconds is number
+        && request.resource.data.seconds >= 1
+        && request.resource.data.seconds <= 3600;
+      allow delete: if isAdmin();
+    }
+
+    match /activeRewards/{uid} {
+      allow read: if isAdmin() || isModerator() || isSelf(uid);
+      allow create, update: if isSelf(uid)
+        && request.resource.data.userId == uid
+        && request.resource.data.expiresAt is number;
+      allow delete: if isAdmin() || isSelf(uid);
+    }
+
+    match /tabLocks/{uid} {
+      allow read: if isAdmin() || isModerator() || isSelf(uid);
+      allow create, update: if isSelf(uid)
+        && request.resource.data.userId == uid
+        && request.resource.data.expiresAt is number
+        && request.resource.data.tabId is string;
+      allow delete: if isAdmin() || isSelf(uid);
+    }
+
+    match /rewardSessions/{sessionId} {
+      allow read: if isAdmin() || isModerator() || (signedIn() && resource.data.userId == request.auth.uid);
+      allow create, update, delete: if false;
+    }
+
+    match /rewardClaims/{claimId} {
+      allow read: if isAdmin() || isModerator() || (signedIn() && resource.data.userId == request.auth.uid);
+      allow create, update, delete: if false;
+    }
+
+    match /transactions/{transactionId} {
+      allow read: if isAdmin() || isModerator() || (signedIn() && resource.data.userId == request.auth.uid);
+      allow create, update, delete: if false;
+    }
+
+    match /pendingRewards/{transactionId} {
+      allow read: if isAdmin() || isModerator() || (signedIn() && resource.data.userId == request.auth.uid);
+      allow create, update, delete: if false;
+    }
+
+    match /securityIncidents/{incidentId} {
+      allow read: if isAdmin() || isModerator();
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly(['id', 'type', 'severity', 'detail', 'date', 'createdAt']);
+      allow update, delete: if false;
+    }
+
+    match /logs/{logId} {
+      allow read: if isAdmin() || isModerator();
+      allow create, update, delete: if false;
+    }
+  }
+}

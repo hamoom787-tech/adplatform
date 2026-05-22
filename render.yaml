@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: adplatform-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm install && npm start
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: FIREBASE_PROJECT_ID
+        value: adplatform-4d5a0
+      - key: CORS_ORIGINS
+        value: https://adplatform-4d5a0.web.app
+      - key: FRONTEND_URL
+        value: https://adplatform-4d5a0.web.app
+      - key: TIMEWALL_IP_CHECK
+        value: "true"
+      - key: TIMEWALL_IP_WHITELIST
+        value: 51.81.120.73,142.111.248.18
+      - key: VAST_ALLOWED_HOSTS
+        value: second-director.com,*.second-director.com,silent-basis.pro,*.silent-basis.pro,hilltopads.com,*.hilltopads.com,monetag.com,*.monetag.com,adsterra.com,*.adsterra.com,adsterra.org,*.adsterra.org,highperformanceformat.com,*.highperformanceformat.com
+      - key: VAST_CACHE_TTL_SECONDS
+        value: "300"
+      - key: VAST_TIMEOUT_MS
+        value: "5000"
+      - key: VAST_MAX_BYTES
+        value: "1048576"
+      - key: JSON_BODY_LIMIT
+        value: 100kb
+      - key: GENERAL_RATE_LIMIT_WINDOW_MS
+        value: "60000"
+      - key: GENERAL_RATE_LIMIT_MAX
+        value: "120"
+      - key: REWARD_RATE_LIMIT_MAX
+        value: "30"
+      - key: WITHDRAWAL_RATE_LIMIT_MAX
+        value: "10"
+      - key: FIREBASE_SERVICE_ACCOUNT_BASE64
+        sync: false
+      - key: FIREBASE_CLIENT_EMAIL
+        sync: false
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false
+      - key: TIMEWALL_SECRET
+        sync: false
+      - key: REWARD_SESSION_SECRET
+        sync: false
